@@ -12,6 +12,14 @@ body{
     inline-size: 100vw;
 }
 
+.is-full {
+    inline-size: 100%;
+}
+
+.max-is-prose {
+    max-inline-size: 65ch;
+}
+
 .bs-screen {
     block-size: 100vh;
 }
@@ -20,8 +28,16 @@ body{
     padding-block: .25rem;
 }
 
+.plb-2\.5 {
+padding-block: .625rem;
+}
+
 .pli-2 {
     padding-inline: .5rem;
+}
+
+.pli-4 {
+    padding-inline: 1rem;
 }
 
 .is-auto {
