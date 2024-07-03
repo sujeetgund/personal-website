@@ -1,3 +1,4 @@
+import { BLOG_PAGE_TITLE } from "@/lib/constants";
 import type { Metadata } from "next";
 import { Schibsted_Grotesk } from "next/font/google";
 
@@ -7,7 +8,7 @@ const schibstedGrotesk = Schibsted_Grotesk({
 });
 
 export const metadata: Metadata = {
-  title: "Sujeet Gund’s personal blog",
+  title: BLOG_PAGE_TITLE,
 };
 
 export default function RootLayout({

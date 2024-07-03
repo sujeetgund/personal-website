@@ -1,4 +1,5 @@
 import { BackButtonSVG } from "@/components/icons";
+import { GET_ALL_BLOGS_QUERY } from "@/lib/constants";
 import { ApiResponse } from "@/lib/types";
 
 import formatDate from "@/utils/formattedDatetime";
@@ -22,24 +23,7 @@ async function getBlogs(query: string, variables = {}) {
 }
 
 const page = async () => {
-  const query = gql`
-    query Publication {
-      publication(host: "sujeetgund.hashnode.dev") {
-        isTeam
-        title
-        posts(first: 10) {
-          edges {
-            node {
-              title
-              publishedAt
-              brief
-              url
-            }
-          }
-        }
-      }
-    }
-  `;
+  const query = gql`${GET_ALL_BLOGS_QUERY}`
   const data = await getBlogs(query);
   return (
     <div className="max-w-2xl mx-auto min-h-screen">

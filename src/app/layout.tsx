@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Schibsted_Grotesk } from "next/font/google";
 import "./globals.css";
+import { DESCRIPTION, KEYWORDS, TITLE } from "@/lib/constants";
 
 const schibstedGrotesk = Schibsted_Grotesk({
   weight: ["400", "500", "600", "700"],
@@ -8,9 +9,27 @@ const schibstedGrotesk = Schibsted_Grotesk({
 });
 
 export const metadata: Metadata = {
-  title: "Sujeet Gund’s personal website",
-  description:
-    "I am a dedicated Data Science student pursuing an Integrated MTech in AI at VIT Bhopal with 3+ years of coding experience. Skilled in Python, JavaScript, and C++, and proficient in Git, Docker, AWS, and MongoDB. Passionate about leveraging data for insights and innovation.",
+  metadataBase: new URL(
+    process.env.NEXT_PUBLIC_BASEURL || "https://sujeetgund.vercel.app"
+  ),
+  keywords: KEYWORDS,
+  title: TITLE,
+  description: DESCRIPTION,
+  openGraph: {
+    title: TITLE,
+    description: DESCRIPTION,
+    url: process.env.NEXT_PUBLIC_BASEURL || "https://sujeetgund.vercel.app",
+    siteName: TITLE,
+    locale: "en_US",
+    type: "website",
+    images: [
+      {
+        url: "/og.png",
+        width: 1200,
+        height: 627,
+      },
+    ],
+  },
   icons: [
     {
       rel: "icon",
@@ -26,11 +45,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={schibstedGrotesk.className}>
-        
-          {children}
-        
-      </body>
+      <body className={schibstedGrotesk.className}>{children}</body>
     </html>
   );
 }

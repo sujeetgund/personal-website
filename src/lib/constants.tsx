@@ -69,3 +69,80 @@ export const LINKS: Link[] = [
     rel: "noopener noreferrer external",
   },
 ];
+
+export const KEYWORDS = [
+  "Sujeet Gund",
+  "Student",
+  "Data Science Student",
+  "AI Enthusiast",
+  "Artificial Intelligence",
+  "Web Development",
+  "Frontend Development",
+  "Backend Development",
+  "Full-Stack Development",
+  "GitHub Projects",
+  "Programming",
+  "JavaScript",
+  "Python",
+  "Open Source Contributor",
+  "Tech Projects",
+  "Tech Trends",
+  "Latest Technologies",
+  "Machine Learning",
+  "Deep Learning",
+  "Web Applications",
+  "Software Development",
+  "Coding",
+  "Technology Enthusiast",
+  "Software Engineering",
+  "Resume",
+  "Professional Experience",
+  "Tech Skills",
+  "Project Showcase",
+  "Personal Portfolio",
+  "Professional Portfolio",
+  "Tech Opportunities",
+  "Career Opportunities",
+  "Student Projects",
+  "Academic Projects",
+  "Coding Projects",
+  "API Development",
+  "Innovative Technologies",
+  "Tech Blogs",
+  "Digital Transformation",
+  "Problem Solving",
+  "Programming Languages",
+  "Tech Industry",
+  "Team Collaboration",
+  "Agile Development",
+  "Software Solutions",
+  "Personal Website",
+  "Learning New Technologies",
+  "Technology Updates",
+  "Career Growth",
+  "Tech Community",
+];
+
+export const DESCRIPTION =
+  "I am a dedicated Data Science student pursuing an Integrated MTech in AI at VIT Bhopal with 3+ years of coding experience. Skilled in Python, JavaScript, and C++, and proficient in Git, Docker, AWS, and MongoDB. Passionate about leveraging data for insights and innovation.";
+
+export const TITLE = "Sujeet Gund’s personal website";
+export const BLOG_PAGE_TITLE = "Sujeet Gund’s personal blog";
+
+
+export const GET_ALL_BLOGS_QUERY = `query Publication {
+      publication(host: "sujeetgund.hashnode.dev") {
+        isTeam
+        title
+        posts(first: 10) {
+          edges {
+            node {
+              title
+              publishedAt
+              brief
+              url
+            }
+          }
+        }
+      }
+    }`;
