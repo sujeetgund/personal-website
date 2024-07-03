@@ -10,7 +10,7 @@ const schibstedGrotesk = Schibsted_Grotesk({
 export const metadata: Metadata = {
   title: "Sujeet Gund’s personal website",
   description:
-    "I am a dedicated Data Science student currently pursuing an Integrated MTech in Artificial Intelligence at VIT Bhopal University. With over 3 years of coding experience, I am skilled in Python, JavaScript, and C++, and proficient in technologies like Git, Docker, AWS, Azure, and MongoDB. My fascination with data drives my passion for leveraging it to uncover insights and drive innovation. I’m eager to connect with like-minded professionals and explore collaborative opportunities in AI and data science. Learn more about my work at my website. For inquiries or collaborations, reach out to me at sujeetgund@gmail.com",
+    "I am a dedicated Data Science student pursuing an Integrated MTech in AI at VIT Bhopal with 3+ years of coding experience. Skilled in Python, JavaScript, and C++, and proficient in Git, Docker, AWS, and MongoDB. Passionate about leveraging data for insights and innovation.",
   icons: [
     {
       rel: "icon",

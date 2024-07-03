@@ -22,3 +22,10 @@ interface ApiResponse {
     publication: Publication;
 }
 
+export interface Link {
+    title: string;
+    href: string;
+    icon: ReactNode;
+    text: string;
+    rel: string;
+  }

@@ -1,4 +1,7 @@
-import BackButtonSVG from "@/components/svg/BackButtonSVG";
+import { BackButtonSVG } from "@/components/icons";
+import { ApiResponse } from "@/lib/types";
+
+import formatDate from "@/utils/formattedDatetime";
 import request, { gql } from "graphql-request";
 import Link from "next/link";
 import React from "react";
@@ -60,22 +63,17 @@ const page = async () => {
                     rel="noopener noreferrer external"
                     className="plb-2.5 pli-4 flex gap-2.5 rounded-md active:bg-gray-200"
                     href={blog.url}
+                    title={blog.title}
                   >
                     <div className="flex flex-col gap-1">
                       <time
                         className="text-sm font-medium tabular-nums leading-none text-gray-700"
                         dateTime={blog.publishedAt}
                       >
-                        {new Date(blog.publishedAt).toLocaleDateString(
-                          "en-US",
-                          {
-                            year: "numeric",
-                            month: "long",
-                            day: "numeric",
-                          }
-                        )}
+                        {formatDate(blog.publishedAt)}
                       </time>
                       <h2 className="font-medium leading-snug">{blog.title}</h2>
+                      <h3 className="text-sm">{blog.brief}</h3>
                     </div>
                     <div className="grow"></div>
                   </a>
