@@ -9,7 +9,20 @@ import {
   GithubSVG,
   GoogleSVG,
   LinkedinSVG,
+  DownloadSVG,
+  KaggleSVG,
 } from "@/components/icons";
+
+export const NAME = {
+  en: "Sujeet Gund",
+  hi: "सुजीत गुंड",
+};
+
+export const LOCATION = {
+  name: "Barshi, India",
+  lat: 18.2308265291523,
+  lng: 75.67880352402449,
+};
 
 export const LINKS: Link[] = [
   {
@@ -48,6 +61,13 @@ export const LINKS: Link[] = [
     rel: "noopener noreferrer external",
   },
   {
+    title: "Kaggle: sujeetgund",
+    href: "https://www.kaggle.com/sujeetgund",
+    icon: <KaggleSVG />,
+    text: "sujeetgund",
+    rel: "noopener noreferrer external",
+  },
+  {
     title: "Google",
     href: "https://www.google.com/search?q=Sujeet+Gund",
     icon: <GoogleSVG />,
@@ -66,6 +86,13 @@ export const LINKS: Link[] = [
     href: "mailto:sujeetgund@gmail.com",
     icon: <EmailSVG />,
     text: "Email",
+    rel: "noopener noreferrer external",
+  },
+  {
+    title: "Resume",
+    href: "https://drive.google.com/file/d/1cEbJdDXdH-4H028u24nHdoMdutnppf3I/view?usp=sharing",
+    icon: <DownloadSVG />,
+    text: "Resume",
     rel: "noopener noreferrer external",
   },
 ];
@@ -128,7 +155,6 @@ export const DESCRIPTION =
 
 export const TITLE = "Sujeet Gund’s personal website";
 export const BLOG_PAGE_TITLE = "Sujeet Gund’s personal blog";
-
 
 export const GET_ALL_BLOGS_QUERY = `query Publication {
       publication(host: "sujeetgund.hashnode.dev") {

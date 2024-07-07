@@ -176,3 +176,61 @@ export const XSVG = () => {
     </svg>
   );
 };
+
+export const DownloadSVG = () => {
+  return (
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      fill="none"
+      viewBox="0 0 24 24"
+      strokeWidth="1.5"
+      stroke="currentColor"
+      className="size-6"
+    >
+      <path
+        strokeLinecap="round"
+        strokeLinejoin="round"
+        d="M3 16.5v2.25A2.25 2.25 0 0 0 5.25 21h13.5A2.25 2.25 0 0 0 21 18.75V16.5M16.5 12 12 16.5m0 0L7.5 12m4.5 4.5V3"
+      />
+    </svg>
+  );
+};
+
+export const ArrowUpRightSVG = () => {
+  return (
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      fill="none"
+      viewBox="0 0 24 24"
+      strokeWidth="1.5"
+      stroke="currentColor"
+      className="size-6"
+    >
+      <path
+        strokeLinecap="round"
+        strokeLinejoin="round"
+        d="m4.5 19.5 15-15m0 0H8.25m11.25 0v11.25"
+      />
+    </svg>
+  );
+};
+
+export const KaggleSVG = () => {
+  return (
+    <svg
+    xmlns="http://www.w3.org/2000/svg"
+    fill="none"
+    viewBox="0 0 24 24"
+    strokeWidth="1.5"
+    stroke="currentColor"
+    className="size-6" // Replace with your actual class if different
+  >
+    <path
+      strokeLinecap="round"
+      strokeLinejoin="round"
+      d="M18.03,22.07L11.8,14.84l6.2-6c0.11-0.11,0.1-0.42-0.28-0.42h-3.68c-0.18,0-0.36,0.09-0.54,0.28L8.95,14.53V1.55c0-0.28-0.14-0.42-0.42-0.42H6.35c-0.28,0-0.42,0.14-0.42,0.42v22.84c0,0.28,0.14,0.42,0.42,0.42h2.18c0.28,0,0.42-0.14,0.42-0.42v-5.02l1.66-1.58l5.96,7.58c0.16,0.18,0.34,0.28,0.54,0.28h3.44c0.18,0,0.28-0.05,0.3-0.15L18.03,22.07z"
+      fill="currentColor" // Use currentColor for fill to inherit text color
+    />
+  </svg>
+  );
+};

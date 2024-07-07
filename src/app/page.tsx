@@ -2,7 +2,7 @@ import Image from "next/image";
 import Link from "next/link";
 
 import profilepic from "../../public/sujeet.png";
-import { LINKS } from "@/lib/constants";
+import { LINKS, LOCATION, NAME } from "@/lib/constants";
 import { BagSVG, LocationSVG } from "@/components/icons";
 
 export default function Home() {
@@ -13,10 +13,10 @@ export default function Home() {
           <figure className="flex flex-col-reverse justify-between gap-3 sm:flex-row group">
             <figcaption className="font-medium">
               <p className="text-lg" lang="en">
-                Sujeet Gund
+                {NAME.en}
               </p>
               <p className="text-lg" lang="hi">
-                सुजीत गुंड
+                {NAME.hi}
               </p>
             </figcaption>
             <Image
@@ -35,7 +35,7 @@ export default function Home() {
             <p className="flex items-center gap-1 text-sm">
               <LocationSVG />
               <span>
-                Barshi, India
+                {LOCATION.name}
                 <span className="text-gray-500"> · 1,000 km away</span>
               </span>
             </p>
@@ -52,7 +52,7 @@ export default function Home() {
                   target="_blank"
                   rel={link.rel}
                   title={link.title}
-                  className="plb-1 pli-2 inline-flex items-center justify-center gap-1 rounded-full border border-gray-400"
+                  className="plb-1 pli-2 inline-flex items-center justify-center gap-1 rounded-full border border-gray-400 hover:border-gray-700 transition-all duration-300 ease-in-out"
                   href={link.href}
                 >
                   <figure className="flex size-4 items-center justify-center">
@@ -63,7 +63,7 @@ export default function Home() {
                   </span>
                 </a>
               </li>
-            ))}  
+            ))}
           </ul>
 
           <p className="mbs-4">
@@ -71,7 +71,7 @@ export default function Home() {
             <Link className="underline" href="/blog">
               blog
             </Link>
-            {""} here
+            {""} here.
           </p>
         </section>
       </div>
